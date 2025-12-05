@@ -1,0 +1,84 @@
+﻿@using Kendo.Mvc.UI
+
+
+<div id="validation-success"></div>
+
+    @(
+    Html.Kendo().Form<Employee_Directory_App.Models.RegisterModel>()
+        .Name("RegisterForm")
+        .HtmlAttributes(new { action = "Register", method= "POST" })
+        .Validatable(v =>
+        {
+            v.ValidateOnBlur(true);
+            v.ValidationSummary(vs => vs.Enable(false));
+        })
+        .Items(items =>
+        {
+            items.AddGroup()
+                .Label("Registration Form")
+                .Items(i =>
+                {
+                    i.Add()
+                        .Field(f => f.FirstName)
+                        .Label(l => l.Text("First Name:"));
+                    i.Add()
+                        .Field(f => f.LastName)
+                        .Label(l => l.Text("Last Name:"));
+                    i.Add()
+                        .Field(f => f.Username)
+                        .Label(l => l.Text("Username:"));
+                    i.Add()
+                        .Field(f => f.PhoneNumber)
+                        .Label(l => l.Text("Phone Number: "));
+                    i.Add()
+                        .Field(f => f.Email)
+                        .Label(l => l.Text("Email:"));
+                    i.Add()
+                        .Field(f => f.Password)
+                        .Label(l => l.Text("Password:"))
+                        .EditorTemplateHandler("setPasswordEditor");
+                    i.Add()
+                        .Field(f => f.ConfirmPassword)
+                        .Label(l => l.Text("Confirm Password"))
+                        .EditorTemplateHandler("setConfirmPasswordEditor");
+                    
+                });
+        })
+        .Events(ev => 
+            ev.ValidateField("onFormValidateField")
+                .Submit("onFormSubmit")
+                .Clear("onFormClear"))
+    )
+
+@* <button type="submit" form="RegisterForm" class="k-button k-button-md k-button-solid k-button-solid-primary">
+    Register
+</button> *@
+
+<script nonce="Telerik-Examples">
+    function setPasswordEditor(container, options){ 
+          $('<input type="password" id="Password" name="' + options.field + '" title="Password" required="required" autocomplete="off" aria-labelledby="Password-form-label" data-bind="value: Password" aria-describedby="Password-form-hint"/>')
+            .appendTo(container)
+            .kendoTextBox();
+    }
+
+    function setConfirmPasswordEditor(container, options){
+           $('<input type="password" id="ConfirmPassword" name="' + options.field + '" title="ConfirmPassword" required="required" autocomplete="off" aria-labelledby="ConfirmPassword-form-label" data-bind="value: ConfirmPassword" aria-describedby="ConfirmPassword-form-hint"/>')
+            .appendTo(container)
+            .kendoTextBox();
+    }
+
+    function onFormValidateField(e)
+    {
+        $("#validation-success").html("");
+    }
+
+    function onFormSubmit(e){
+       
+        // window.location.href = '/Authenticate/Login';
+    }
+
+    function onFormClear(e)
+    {
+        $("#validation-success").html("");
+    }
+</script>

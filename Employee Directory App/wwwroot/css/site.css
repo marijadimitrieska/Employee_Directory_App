@@ -1,0 +1,172 @@
+﻿html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+/* #region Navbar styles */
+.navbar-header {
+    border-bottom: 1px solid rgba(255,255,255, 0.1);
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: lighter;
+}
+/* #endregion */
+
+
+/* #region Footer styles */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.85em;
+}
+/* #endregion */
+
+/* #region custom Kendo UI styles */
+
+
+h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+h2 {
+    font-weight: lighter;
+}
+
+.placeholder img {
+    display: inline-block;
+}
+
+p .k-button {
+    margin: 0 15px 0 0;
+}
+
+#configure {
+    display: none;
+}
+
+p .k-button {
+    margin: 0 15px 0 0;
+}
+
+.k-state-active .label {
+    font-size: 1em;
+}
+
+#responsive-panel {
+    padding: 0;
+    width: 100%;
+}
+
+    #responsive-panel .k-menu {
+        padding: .5rem;
+    }
+/* #endregion */
+
+@media (max-width: 767px) {
+    #responsive-panel {
+        transition: all linear .2s;
+    }
+
+    #configure {
+        display: block;
+        float: right;
+    }
+
+    .k-rpanel {
+        padding: 0 1rem;
+    }
+
+    .k-rpanel-expanded {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-header {
+        width: 100%;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .k-menu .k-item,
+    .k-menu .k-link {
+        width: 100%;
+    }
+
+    .k-widget.k-menu-horizontal > .k-item {
+        border: none;
+    }
+
+    .k-menu .k-link {
+        box-sizing: border-box;
+    }
+
+    .k-rpanel-expanded ul {
+        flex-direction: column;
+    }
+}
+
+/* AI Assistant Box */
+#ai-assistant {
+    border: 1px solid transparent;
+    border-radius: 11px;
+    padding: 9px 16px;
+    background: linear-gradient(var(--kendo-color-surface), var(--kendo-color-surface)) padding-box, linear-gradient(114deg, #4b5ffa 0%, #c158e4 93%) border-box;
+}
+
+    #ai-assistant::before {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .18;
+        background: url(../images/ai-circle.png) center center no-repeat;
+        background-size: cover;
+    }
+
+    #ai-assistant h4,
+    #ai-assistant > p,
+    #ai-assistant > a {
+        position: relative;
+        padding-left: 41px;
+        z-index: 2;
+    }
+
+    #ai-assistant h4 {
+        position: relative;
+        margin: 0 0 .3em;
+        font-size: 20px;
+        line-height: 1.4;
+        font-weight: 500;
+    }
+
+    #ai-assistant .k-icon {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #4b5ffa;
+    }
+
+    #ai-assistant > a {
+        color: #a75ae9;
+        text-decoration: none;
+    }
+
+        #ai-assistant > a:hover {
+            text-decoration: underline;
+        }

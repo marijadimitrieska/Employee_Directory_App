@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web" ToolsVersion="15.0">
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<Nullable>disable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="10.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.0" />
+		<PackageReference Condition="'$(SELECTED_VERSION)' == ''" Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="10.0.*" />
+		<PackageReference Condition="'$(SELECTED_VERSION)' != ''" Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="$(SELECTED_VERSION)" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.0" />
+
+
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="10.0.0-rc.1.25458.5" />
+		<PackageReference Include="Telerik.UI.for.AspNet.Core" Version="2025.4.1111" />
+	</ItemGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+		<DefineConstants>$(DefineConstants);RELEASE</DefineConstants>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="Templates\**" />
+		<Content Remove="Templates\**" />
+		<EmbeddedResource Remove="Templates\**" />
+		<None Remove="Templates\**" />
+	</ItemGroup>
+
+	<ProjectExtensions>
+		<VisualStudio>
+			<UserProperties UseCdnSupport="True" />
+		</VisualStudio>
+	</ProjectExtensions>
+</Project>

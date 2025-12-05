@@ -1,0 +1,53 @@
+﻿@using Kendo.Mvc.UI
+
+<div class="demo-section">
+    <div id="validation-success"></div>
+    @(Html.Kendo().Form<Employee_Directory_App.Models.LoginModel>()
+        .Name("LoginForm")
+        .HtmlAttributes(new { action="Login", method="POST" })
+        .Validatable(v => 
+        {
+            v.ValidateOnBlur(true);
+            v.ValidationSummary(vs => vs.Enable(false));
+        })
+        .Items(items => 
+        {
+            items.AddGroup()
+                .Label("Sign in form")
+                .Items(i => {
+                    i.Add()
+                        .Field(f => f.Username)
+                        .Label(l => l.Text("Username:"));
+                    i.Add()
+                        .Field(f => f.Password)
+                        .Label(l => l.Text("Password:"))
+                        .EditorTemplateHandler("setPasswordEditor");
+                });
+        })
+        .Events(ev => 
+            ev.ValidateField("onFormValidateField")
+                .Submit("onFormSubmit")
+                .Clear("onFormClear"))
+    )
+</div>
+
+<script nonce="Telerik-Examples">
+    function setPasswordEditor(container, options){
+          $('<input type="password" id="Password" name="' + options.field + '" title="Password" required="required" autocomplete="off" aria-labelledby="Password-form-label" data-bind="value: Password" aria-describedby="Password-form-hint"/>')
+            .appendTo(container)
+            .kendoTextBox();
+    }
+    function onFormValidateField(e){
+        $("#validation-success").html("");
+    }
+
+    function onFormSubmit(e){
+       // e.preventDefault();
+       // window.location.href = '/Employees/Index';
+    }
+
+    function onFormClear(e)
+    {
+        $("#validation-success").html("");
+    }
+</script>

@@ -1,0 +1,199 @@
+is_global = true
+build_property.TargetFramework = net10.0
+build_property.TargetFramework = net10.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v10.0
+build_property.RootNamespace = Employee_Directory_App
+build_property.RootNamespace = Employee_Directory_App
+build_property.ProjectDir = C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 10.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Authenticate/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRlXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Authenticate/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRlXFJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Departments/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Departments/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Departments/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Departments/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Departments/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/EmployeeProjects/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVQcm9qZWN0c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/EmployeeProjects/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVQcm9qZWN0c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/EmployeeProjects/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVQcm9qZWN0c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/EmployeeProjects/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVQcm9qZWN0c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/EmployeeProjects/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVQcm9qZWN0c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Employees/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Employees/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Employees/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Employees/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Employees/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Employees/ReadEmployees.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXFJlYWRFbXBsb3llZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/JobTitles/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iVGl0bGVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/JobTitles/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iVGl0bGVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/JobTitles/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iVGl0bGVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/JobTitles/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iVGl0bGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/JobTitles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iVGl0bGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Shared/EditorTemplates/Boolean.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xCb29sZWFuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Shared/EditorTemplates/Country.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xDb3VudHJ5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Shared/EditorTemplates/Currency.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xDdXJyZW5jeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Shared/EditorTemplates/Date.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xEYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Shared/EditorTemplates/DateTime.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xEYXRlVGltZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Shared/EditorTemplates/Email.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xFbWFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Shared/EditorTemplates/EmailAddress.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xFbWFpbEFkZHJlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Shared/EditorTemplates/GridForeignKey.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xHcmlkRm9yZWlnbktleS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Shared/EditorTemplates/Integer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xJbnRlZ2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Shared/EditorTemplates/Number.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xOdW1iZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Shared/EditorTemplates/Password.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Shared/EditorTemplates/String.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xTdHJpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Shared/EditorTemplates/Time.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xUaW1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Shared/EditorTemplates/Url.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xVcmwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

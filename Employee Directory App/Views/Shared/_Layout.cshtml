@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self' https://kendo.cdn.telerik.com https://code.jquery.com/ https://cdn.kendostatic.com https://unpkg.com https://cdn.jsdelivr.net 'nonce-Telerik-Examples'; style-src 'self' https://kendo.cdn.telerik.com https://unpkg.com https://cdn.jsdelivr.net; font-src 'self' https://unpkg.com; connect-src ws: http: 'self';" />
+
+    <title>@ViewData["Title"] - Employee_Directory_App</title>
+
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    </environment>
+    @*Core Content Start*@
+
+    <link href="https://kendo.cdn.telerik.com/themes/12.0.0/default/default-purple.css" rel="stylesheet" type="text/css" />
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script src="https://unpkg.com/jszip/dist/jszip.min.js"></script>
+	<script src="https://cdn.kendostatic.com/2025.4.1111/js/kendo.all.min.js"></script>
+	<script src="https://cdn.kendostatic.com/2025.4.1111/js/kendo.aspnetmvc.min.js"></script>
+@*Core Content End*@
+</head>
+<body class="k-content">
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid d-flex justify-content-between p-0">
+            <a class="navbar-brand d-flex align-items-center" asp-controller="Employees" asp-action="Index">Employee Directory App</a>
+        </div>
+       
+    </nav>
+    <div class="navbar navbar-dark bg-light mb-4">
+        @(
+            Html.Kendo().Menu()
+                        .Name("Menu")
+                        .Items(items =>
+                        {
+
+                            items.Add().Text("Employees").Action("Index", "Employees", new { area = "" });
+                            items.Add().Text("Departments").Action("Index", "Departments", new { area = "" });
+                            items.Add().Text("JobTitles").Action("Index", "JobTitles", new { area = "" });
+                            items.Add().Text("Employee Projects").Action("Index", "EmployeeProjects", new { area = "" });
+
+                            if(!User.Identity.IsAuthenticated)
+                            {
+                                items.Add().Text("Login").Action("Login", "Authenticate", new { area = "" });
+                                items.Add().Text("Register").Action("Register", "Authenticate", new { area = "" });
+                            }
+                            else
+                            {
+                                items.Add().Text("Logout").Action("Logout", "Authenticate", new { area = "" });
+                            }
+
+                })
+            )
+    </div>
+
+    <main>
+        <div class="container-fluid">
+            @RenderBody()
+        </div>
+    </main>
+
+    <footer class="footer text-center d-flex align-items-center">
+        <div class="container-fluid">
+            <p class="text-muted">
+                Copyright © @DateTime.Now.Year Progress Software Corporation and/or its subsidiaries or affiliates. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    @(Html.Kendo().DeferredScriptFile())
+
+    <environment names="Development">
+        <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    </environment>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

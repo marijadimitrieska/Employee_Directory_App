@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+@* <script id="photoTemplate" type="text/x-kendo-template">
+     # if(PhotoUrl){ #
+        <img src="#=PhotoUrl#" style="width:50px;height:50px;border-radius:50%;object-fit:cover;" alt="Employee Photo" />
+    # } else { #
+        <span class="text-muted">No Photo</span>
+    # } #
+ </script> *@
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create" class="k-button k-button-md k-rounded-md k-button-solid">Create New</a>
+</p>
+
+@(Html.Kendo().Grid<dynamic>()
+    .Name("grid")
+    .Columns(columns=>{
+        columns.Bound("FirstName").Title("First Name");
+        columns.Bound("LastName").Title("Last Name");
+        columns.Bound("Email");
+        columns.Bound("PhoneNumber");
+        columns.Bound("HireDate").Format("{0:dd.MM.yyyy}");
+        columns.Bound("Department").Title("Department");
+        columns.Bound("JobTitle").Title("Job Title");
+        columns.Bound("PhotoUrl");
+     
+        columns.Bound("IsActive");
+
+        columns.Command(command =>{
+            command.Edit().Text("Edit");
+            command.Custom("Details").Click("detailsClick").Text("Details");
+            command.Destroy().Text("Delete");
+        }).Title("Actions");
+    })
+    .Pageable()
+    .Sortable()
+    .Scrollable()
+    .Groupable()
+    .Filterable()
+    .Editable(edistable => edistable.Enabled(false))
+    .DataSource(dataSource => dataSource
+            .Ajax()
+            .PageSize(20)
+            .Model(model => 
+            {
+                model.Id("Id");
+          
+            })
+            .Read(read => read.Action("ReadEmployees", "Employees"))
+@*             .Update(update => update.Action("Edit", "Employees"))
+            .Destroy(destroy => destroy.Action("Delete", "Employees"))
+            .Create(create => create.Action("Create", "Employees")) *@
+    )
+)
+
+@section Scripts{
+<script src="~/js/employees.js"></script>
+
+}
