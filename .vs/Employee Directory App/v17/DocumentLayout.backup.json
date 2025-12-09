@@ -1,0 +1,310 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|c:\\users\\marijad\\desktop\\employee directory app\\employee directory app\\views\\shared\\editortemplates\\employeegridviewmodel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|solutionrelative:employee directory app\\views\\shared\\editortemplates\\employeegridviewmodel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|c:\\users\\marijad\\desktop\\employee directory app\\employee directory app\\views\\employees\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|solutionrelative:employee directory app\\views\\employees\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|c:\\users\\marijad\\desktop\\employee directory app\\employee directory app\\views\\employees\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|solutionrelative:employee directory app\\views\\employees\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|c:\\users\\marijad\\desktop\\employee directory app\\employee directory app\\views\\employees\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|solutionrelative:employee directory app\\views\\employees\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|c:\\users\\marijad\\desktop\\employee directory app\\employee directory app\\views\\shared\\editortemplates\\email.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|solutionrelative:employee directory app\\views\\shared\\editortemplates\\email.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|c:\\users\\marijad\\desktop\\employee directory app\\employee directory app\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|solutionrelative:employee directory app\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|c:\\users\\marijad\\desktop\\employee directory app\\employee directory app\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|solutionrelative:employee directory app\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|c:\\users\\marijad\\desktop\\employee directory app\\employee directory app\\viewmodels\\employeegridviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|solutionrelative:employee directory app\\viewmodels\\employeegridviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|c:\\users\\marijad\\desktop\\employee directory app\\employee directory app\\data\\seeder\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|solutionrelative:employee directory app\\data\\seeder\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|c:\\users\\marijad\\desktop\\employee directory app\\employee directory app\\viewmodels\\employeeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|solutionrelative:employee directory app\\viewmodels\\employeeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|c:\\users\\marijad\\desktop\\employee directory app\\employee directory app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|solutionrelative:employee directory app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|c:\\users\\marijad\\desktop\\employee directory app\\employee directory app\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|solutionrelative:employee directory app\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|c:\\users\\marijad\\desktop\\employee directory app\\employee directory app\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|solutionrelative:employee directory app\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|c:\\users\\marijad\\desktop\\employee directory app\\employee directory app\\views\\authenticate\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|solutionrelative:employee directory app\\views\\authenticate\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|c:\\users\\marijad\\desktop\\employee directory app\\employee directory app\\controllers\\authenticatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|solutionrelative:employee directory app\\controllers\\authenticatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|c:\\users\\marijad\\desktop\\employee directory app\\employee directory app\\controllers\\employeeprojectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{352AB8A1-D672-46DF-BF80-7FCE48441169}|Employee Directory App\\Employee Directory App.csproj|solutionrelative:employee directory app\\controllers\\employeeprojectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Views\\Employees\\Create.cshtml",
+              "RelativeDocumentMoniker": "Employee Directory App\\Views\\Employees\\Create.cshtml",
+              "ToolTip": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Views\\Employees\\Create.cshtml",
+              "RelativeToolTip": "Employee Directory App\\Views\\Employees\\Create.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T16:02:05.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Views\\Employees\\Index.cshtml",
+              "RelativeDocumentMoniker": "Employee Directory App\\Views\\Employees\\Index.cshtml",
+              "ToolTip": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Views\\Employees\\Index.cshtml",
+              "RelativeToolTip": "Employee Directory App\\Views\\Employees\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T09:09:08.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmployeeGridViewModel.cshtml",
+              "DocumentMoniker": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Views\\Shared\\EditorTemplates\\EmployeeGridViewModel.cshtml",
+              "RelativeDocumentMoniker": "Employee Directory App\\Views\\Shared\\EditorTemplates\\EmployeeGridViewModel.cshtml",
+              "ToolTip": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Views\\Shared\\EditorTemplates\\EmployeeGridViewModel.cshtml*",
+              "RelativeToolTip": "Employee Directory App\\Views\\Shared\\EditorTemplates\\EmployeeGridViewModel.cshtml*",
+              "ViewState": "AgIAADkAAAAAAAAAAAAgwEAAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T15:43:32.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Email.cshtml",
+              "DocumentMoniker": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Views\\Shared\\EditorTemplates\\Email.cshtml",
+              "RelativeDocumentMoniker": "Employee Directory App\\Views\\Shared\\EditorTemplates\\Email.cshtml",
+              "ToolTip": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Views\\Shared\\EditorTemplates\\Email.cshtml",
+              "RelativeToolTip": "Employee Directory App\\Views\\Shared\\EditorTemplates\\Email.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T15:42:58.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Views\\Employees\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Employee Directory App\\Views\\Employees\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Views\\Employees\\Edit.cshtml",
+              "RelativeToolTip": "Employee Directory App\\Views\\Employees\\Edit.cshtml",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAiwGEAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T15:26:27.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "Employee Directory App\\Models\\Employee.cs",
+              "ToolTip": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Models\\Employee.cs",
+              "RelativeToolTip": "Employee Directory App\\Models\\Employee.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAqwBkAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T08:55:09.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EmployeesController.cs",
+              "DocumentMoniker": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Controllers\\EmployeesController.cs",
+              "RelativeDocumentMoniker": "Employee Directory App\\Controllers\\EmployeesController.cs",
+              "ToolTip": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Controllers\\EmployeesController.cs",
+              "RelativeToolTip": "Employee Directory App\\Controllers\\EmployeesController.cs",
+              "ViewState": "AgIAAKQBAAAAAAAAAAAgwLUBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T08:25:34.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DBInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Data\\Seeder\\DBInitializer.cs",
+              "RelativeDocumentMoniker": "Employee Directory App\\Data\\Seeder\\DBInitializer.cs",
+              "ToolTip": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Data\\Seeder\\DBInitializer.cs",
+              "RelativeToolTip": "Employee Directory App\\Data\\Seeder\\DBInitializer.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAIwE0AAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T08:42:37.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EmployeeViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\ViewModels\\EmployeeViewModel.cs",
+              "RelativeDocumentMoniker": "Employee Directory App\\ViewModels\\EmployeeViewModel.cs",
+              "ToolTip": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\ViewModels\\EmployeeViewModel.cs",
+              "RelativeToolTip": "Employee Directory App\\ViewModels\\EmployeeViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T08:47:06.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Program.cs",
+              "RelativeDocumentMoniker": "Employee Directory App\\Program.cs",
+              "ToolTip": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Program.cs",
+              "RelativeToolTip": "Employee Directory App\\Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACcAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T11:12:12.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Employee Directory App\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Employee Directory App\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAiwBYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T11:14:01.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Employee Directory App\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Employee Directory App\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-09T11:05:43.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Views\\Authenticate\\Login.cshtml",
+              "RelativeDocumentMoniker": "Employee Directory App\\Views\\Authenticate\\Login.cshtml",
+              "ToolTip": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Views\\Authenticate\\Login.cshtml",
+              "RelativeToolTip": "Employee Directory App\\Views\\Authenticate\\Login.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T09:28:08.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AuthenticateController.cs",
+              "DocumentMoniker": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Controllers\\AuthenticateController.cs",
+              "RelativeDocumentMoniker": "Employee Directory App\\Controllers\\AuthenticateController.cs",
+              "ToolTip": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Controllers\\AuthenticateController.cs",
+              "RelativeToolTip": "Employee Directory App\\Controllers\\AuthenticateController.cs",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAcwJUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T08:12:28.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EmployeeProjectsController.cs",
+              "DocumentMoniker": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Controllers\\EmployeeProjectsController.cs",
+              "RelativeDocumentMoniker": "Employee Directory App\\Controllers\\EmployeeProjectsController.cs",
+              "ToolTip": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\Controllers\\EmployeeProjectsController.cs",
+              "RelativeToolTip": "Employee Directory App\\Controllers\\EmployeeProjectsController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowD4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T08:12:38.234Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "ded0d78a-8618-494e-9d46-42aac8da834f",
+        "Display": 0,
+        "X": -3,
+        "Y": 32,
+        "Width": 733,
+        "Height": 461,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EmployeeGridViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\ViewModels\\EmployeeGridViewModel.cs",
+              "RelativeDocumentMoniker": "Employee Directory App\\ViewModels\\EmployeeGridViewModel.cs",
+              "ToolTip": "C:\\Users\\marijad\\Desktop\\Employee Directory App\\Employee Directory App\\ViewModels\\EmployeeGridViewModel.cs",
+              "RelativeToolTip": "Employee Directory App\\ViewModels\\EmployeeGridViewModel.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAkwBAAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T11:26:12.875Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 ﻿using Employee_Directory_App.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace Employee_Directory_App.Data.Seeder
 {
@@ -21,6 +22,29 @@ namespace Employee_Directory_App.Data.Seeder
                 }
             }
 
+            var department = await contex.Departments.FirstOrDefaultAsync(d => d.Name == "Administration");
+            if(department  == null)
+            {
+                department = new Department
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Administration"
+                };
+
+                contex.Departments.Add(department);
+                await contex.SaveChangesAsync();
+            }
+
+            var jobTitle = await contex.JobTitles.FirstOrDefaultAsync(j => j.Title == "System Administrator");
+            if (jobTitle == null) {
+                jobTitle = new JobTitle
+                {
+                    Id= Guid.NewGuid(),
+                    Title = "System Administrator"
+                };
+                contex.JobTitles.Add(jobTitle);
+                await contex.SaveChangesAsync();
+            }
             var adminEmail = "admin@test.com";
 
             var adminUser = await userManager.FindByNameAsync(adminEmail);
@@ -35,6 +59,8 @@ namespace Employee_Directory_App.Data.Seeder
                     Email = adminEmail,
                     PhoneNumber = "222222222",
                     HireDate = DateTime.Now,
+                    DepartmentId = department.Id,
+                    JobTitleId = jobTitle.Id,
                     IsActive = true
                 };
 

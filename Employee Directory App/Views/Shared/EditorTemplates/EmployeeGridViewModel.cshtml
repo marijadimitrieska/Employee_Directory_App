@@ -1,0 +1,86 @@
+﻿@model Employee_Directory_App.ViewModels.EmployeeGridViewModel
+
+<div class="k-edit-form-container">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="FirstName"></label>
+        @Html.TextBoxFor(m => m.FirstName, new { @class = "k-textbox"})
+        @Html.ValidationMessageFor(m => m.FirstName)
+    </div>
+
+    <div class="form-group">
+        <label asp-for="LastName"></label>
+        @Html.TextBoxFor(m=> m.LastName, new { @class = "k-textbox"})
+        @Html.ValidationMessageFor(m=>m.LastName)
+    </div>
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        @Html.TextBoxFor(m=>m.Email, new { @class = "k-textbox"})
+        @Html.ValidationMessageFor(m => m.Email)
+    </div>
+    <div class="form-group">
+        <label asp-for="PhoneNumber"></label>
+        @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "k-textbox"})
+        @Html.ValidationMessageFor(m=>m.PhoneNumber)
+    </div>
+    <div class="form-group">
+        <label asp-for="HireDate"></label>
+        @Html.TextBoxFor(m=>m.HireDate, new { @class = "k-textbox"})
+        @Html.ValidationMessageFor(m=>m.HireDate)
+    </div>
+    <div class="form-group">
+        <label asp-for="ProfilePhoto">Upload Image</label>
+        @(
+                Html.Kendo().Upload()
+                .Name("ImageFile")
+                .Multiple(false)
+                .Async(a => a
+                .Save("SaveTempImage", "Employees")
+                .AutoUpload(true))
+                .Validation(v => v
+                .AllowedExtensions(new string[] { ".jpg", ".jpeg", ".png", ".gif" })
+                .MaxFileSize(5242880))
+                .Events(e => e
+                .Success("onUploadSuccess")
+                .Error("onUploadError"))
+                )
+        <div id="imagePreview" style="margin-top:20px;"></div>
+    </div>
+    <div class="form-group">
+        @Html.Kendo().CheckBoxFor(m => m.IsActive)
+        <label asp-for="IsActive"></label>
+        <span asp-validation-for="IsActive" class="text-danger k-invalid-msg" data-for="IsActive"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="IsActive"></label>
+        @Html.Kendo().CheckBoxFor(m => m.IsActive)
+        @Html.ValidationMessageFor(m => m.IsActive)
+    </div>
+</div>
+
+<script nonce="Telerik-Examples">
+    function onUploadSuccess(e)
+    {
+        console.log("Upload sucessful", e)
+        if(e.response && e.response.success)
+        {
+            $("#imagePreview").html("<p class='text-success'>Image upload successfully!</p>");
+
+        }
+    }
+    function onUploadError(e){
+        console.log("Upload error", e)
+        if(!(e.response && e.response.success))
+        {
+            $("#imagePreview").html("<p class='text-danger'>Upload failed: " + (e.XMLHttpRequest.responseText || "Unknown error") + "</p>");
+
+        }
+    }
+
+    $(document).ready(function (){
+        $("#EmployeeForm").kendoValidator({
+
+        });
+    })
+</script>

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Employee_Directory_App.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251205145939_AddedRelationInEmployee")]
-    partial class AddedRelationInEmployee
+    [Migration("20251209143045_InitialIdentity")]
+    partial class InitialIdentity
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -130,9 +130,6 @@ namespace Employee_Directory_App.Migrations
                     b.Property<DateTime>("HireDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("ImageExtension")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
@@ -145,8 +142,11 @@ namespace Employee_Directory_App.Migrations
                     b.Property<string>("PhoneNumber")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<byte[]>("ProfilePhoto")
-                        .HasColumnType("varbinary(max)");
+                    b.Property<string>("ProfilePhoto")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -328,7 +328,7 @@ namespace Employee_Directory_App.Migrations
             modelBuilder.Entity("Employee_Directory_App.Models.AuthenticateUser", b =>
                 {
                     b.HasOne("Employee_Directory_App.Models.Employee", "Employee")
-                        .WithOne()
+                        .WithOne("User")
                         .HasForeignKey("Employee_Directory_App.Models.AuthenticateUser", "EmployeeId")
                         .OnDelete(DeleteBehavior.Cascade);
 
@@ -410,6 +410,11 @@ namespace Employee_Directory_App.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Employee_Directory_App.Models.Employee", b =>
+                {
+                    b.Navigation("User");
                 });
 #pragma warning restore 612, 618
         }

@@ -22,8 +22,8 @@ namespace Employee_Directory_App.Models
         public Guid? JobTitleId { get; set; }
         public JobTitle? JobTitle { get; set; }
     
-        public byte[]? ProfilePhoto { get; set; }
-        public string? ImageExtension { get; set; }
+        public string? ProfilePhoto { get; set; }
+       
         public bool IsActive { get; set; }
 
         public string? UserId { get; set; }

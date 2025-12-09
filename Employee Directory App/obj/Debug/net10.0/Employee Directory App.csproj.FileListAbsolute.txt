@@ -400,6 +400,7 @@ C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\Employee Directory App.RazorAssemblyInfo.cache
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\Employee Directory App.RazorAssemblyInfo.cs
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\Telerik.Licensing.LicenseInfo.cs
+C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\Employee Directory App.sourcelink.json
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\rjimswa.dswa.cache.json
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json

@@ -1,8 +1,10 @@
 ﻿using Employee_Directory_App.Data;
 using Employee_Directory_App.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
@@ -60,88 +62,91 @@ namespace Employee_Directory_App.Controllers
         }
 
         // GET Register
-        public IActionResult Register()
-        {
-            return View();
-        }
+        //[Authorize(Roles = "Admin")]
+        //public IActionResult Register()
+        //{
+        //    return View();
+        //}
 
-        // POST Register
-        [HttpPost]
-        public async Task<IActionResult> Register(RegisterModel registerModel)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View(registerModel);
-            }
+        //// POST Register
+        //[HttpPost]
+        //[Authorize(Roles = "Admin")]
+        //public async Task<IActionResult> Register(RegisterModel registerModel)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return View(registerModel);
+        //    }
 
           
-            if (await _userManager.FindByNameAsync(registerModel.Username) != null)
-            {
-                ViewBag.Error = "This user already exists";
-                return View(registerModel);
-            }
+        //    if (await _userManager.FindByNameAsync(registerModel.Username) != null)
+        //    {
+        //        ViewBag.Error = "This user already exists";
+        //        return View(registerModel);
+        //    }
 
-            if (!await _roleManager.RoleExistsAsync("Employee"))
-            {
-                await _roleManager.CreateAsync(new IdentityRole("Employee"));
-            }
+        //    if (!await _roleManager.RoleExistsAsync("Employee"))
+        //    {
+        //        await _roleManager.CreateAsync(new IdentityRole("Employee"));
+        //    }
 
-            using var transaction = await _context.Database.BeginTransactionAsync();
-            try { 
-                var employee = new Employee
-                {
-                    Id = Guid.NewGuid(),
-                    FirstName = registerModel.FirstName,
-                    LastName = registerModel.LastName,
-                    Email = registerModel.Email,
-                    PhoneNumber = registerModel.PhoneNumber,
-                    HireDate = DateTime.Now,
-                    IsActive = true
-                };
+        //    using var transaction = await _context.Database.BeginTransactionAsync();
+        //    try { 
+        //        var employee = new Employee
+        //        {
+        //            Id = Guid.NewGuid(),
+        //            FirstName = registerModel.FirstName,
+        //            LastName = registerModel.LastName,
+        //            Email = registerModel.Email,
+        //            PhoneNumber = registerModel.PhoneNumber,
+             
+        //            HireDate = DateTime.Now,
+        //            IsActive = true
+        //        };
            
-                _context.Employees.Add(employee);
-                await _context.SaveChangesAsync();
+        //        _context.Employees.Add(employee);
+        //        await _context.SaveChangesAsync();
 
-                var authenticateUser = new AuthenticateUser
-                {
-                    UserName = registerModel.Username,
-                    Email = registerModel.Email,
-                    EmployeeId = employee.Id,
-                    EmailConfirmed = true
-                };
+        //        var authenticateUser = new AuthenticateUser
+        //        {
+        //            UserName = registerModel.Username,
+        //            Email = registerModel.Email,
+        //            EmployeeId = employee.Id,
+        //            EmailConfirmed = true
+        //        };
 
-                var result = await _userManager.CreateAsync(authenticateUser, registerModel.Password);
+        //        var result = await _userManager.CreateAsync(authenticateUser, registerModel.Password);
 
-                if (!result.Succeeded)
-                {
-                    foreach (var error in result.Errors)
-                        ModelState.AddModelError("", error.Description);
+        //        if (!result.Succeeded)
+        //        {
+        //            foreach (var error in result.Errors)
+        //                ModelState.AddModelError("", error.Description);
 
-                    return View(registerModel);
+        //            return View(registerModel);
                 
-                }
-                await _userManager.AddToRoleAsync(authenticateUser, "Employee");
+        //        }
+        //        await _userManager.AddToRoleAsync(authenticateUser, "Employee");
 
-                await transaction.CommitAsync();
+        //        await transaction.CommitAsync();
 
-                return RedirectToAction("Login");
+        //        return RedirectToAction("Login");
 
-            }
-            catch (Exception ex)
-            {
-                await transaction.RollbackAsync();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        await transaction.RollbackAsync();
 
-                ViewBag.Error =  ex.Message;
+        //        ViewBag.Error =  ex.Message;
 
-                if (ex.InnerException != null)
-                {
-                    ViewBag.Error += " Inner Exception: " + ex.InnerException.Message;
-                }
-                return View(registerModel);
-            }
+        //        if (ex.InnerException != null)
+        //        {
+        //            ViewBag.Error += " Inner Exception: " + ex.InnerException.Message;
+        //        }
+        //        return View(registerModel);
+        //    }
 
          
-        }
+        //}
 
 
         public async Task<IActionResult> Logout()
