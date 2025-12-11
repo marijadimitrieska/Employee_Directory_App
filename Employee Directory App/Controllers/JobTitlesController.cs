@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Employee_Directory_App.Data;
+using Employee_Directory_App.Models;
+using Kendo.Mvc.Extensions;
+using Kendo.Mvc.UI;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Employee_Directory_App.Data;
-using Employee_Directory_App.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace Employee_Directory_App.Controllers
 {
@@ -24,7 +27,22 @@ namespace Employee_Directory_App.Controllers
         {
             return View(await _context.JobTitles.ToListAsync());
         }
+        public async Task<IActionResult> ReadJobTitles([DataSourceRequest] DataSourceRequest request)
+        {
+            var jobTitles = _context.JobTitles.Select(j => new JobTitle
+            {
+                Id = j.Id,
+                Title = j.Title
+            });
 
+            var result = await jobTitles.ToDataSourceResultAsync(request);
+
+            return Json(result, new JsonSerializerOptions
+            {
+                PropertyNamingPolicy = null,
+                ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles
+            });
+        }
         // GET: JobTitles/Details/5
         public async Task<IActionResult> Details(Guid? id)
         {

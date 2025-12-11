@@ -1,70 +1,135 @@
 ﻿@using Employee_Directory_App.Models
 @using Employee_Directory_App.ViewModels
-@* REMOVE THIS LINE: @model IEnumerable<Employee_Directory_App.ViewModels.EmployeeGridViewModel> *@
+@using Kendo.Mvc.UI
+@using Kendo.Mvc.Extensions
+
 @{
     ViewData["Title"] = "Index";
 }
 <h1>Index</h1>
+<div>
+    <button class="k-button k-button-md k-rounded-md k-button-success export-pdf">Print</button>
+</div>
+<br/>
 <p>
     <a asp-action="Create" class="k-button k-button-md k-rounded-md k-button-solid">Create New</a>
 </p>
 <script nonce="Telerik-Examples">
-    function onDataBound(e){
-        var grid = this;
-        var isAdmin = '@User.IsInRole("Admin")'.toLowerCase() === "true";
-        if(!isAdmin){
-            grid.tbody.find(".k-grid-Delete").hide();
+    // function profilePhotoTemplate(data){
+    //     if(data.ProfilePhoto && data.ProfilePhoto.trim() !== ''){
+    //         return '<img src="' + data.ProfilePhoto + '" alt="Profile" style="width: 50px; height: 50px; object-fit: cover;"/>';
+    //     } else {
+    //         return '<span class="text-muted">No Photo</span>';
+    //     }
+    // }
+ 
+        function onDataBound(e){
+            console.log("DataBound event fired");
+            var grid = this;
+            var dataSource = grid.dataSource;
+            console.log("Total records:",dataSource.total());
+            console.log("Data:", dataSource.data());
+            console.log("View: ", dataSource.view());
+
+            var isAdmin = '@User.IsInRole("Admin")'.toLowerCase() === "true";
+            if(!isAdmin){
+                grid.tbody.find(".k-grid-Delete").hide();
+            }
         }
-    }
+        function onEditClick(e){
+            e.preventDefault();
+            var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
+            window.location.href = '/Employees/Edit/' + dataItem.Id;
+        }
     
-    function detailsClick(e){
-        var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
-        window.location.href = '/Employees/Details/' + dataItem.Id;
-    }
+        function detailsClick(e){
+            var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
+            window.location.href = '/Employees/Details/' + dataItem.Id;
+        }
+
+        function onRequestStart(e){
+            console.log("Request starting...",e);
+        }
+
+        function onRequestEnd(e){
+            console.log("Request ended", e);
+            console.log("Response: ", e.response);
+            console.log("Type: ", e.type);
+        }
+
+        function onError(e)
+        {
+            console.error("DataSource error:",e);
+            console.error("Grid error:",e);
+            console.error("Status: ", e.status);
+            console.error("Error thrown: ", e.errorThrown);
+            if(e.xhr){
+             console.error("XHR: ", e.xhr);
+             console.error("Response Text:", e.xhr.responseText);
+            }
+        }
+
+        $(".export-pdf").click(function () {
+            $("#EmployeesGrid").getKendoGrid().saveAsPDF();
+        });
+
+    
 </script>
 
+<div class="content-wrapper">
 @(
-Html.Kendo().Grid<EmployeeGridViewModel>()  @* Change this - specify type but don't pass Model *@
-.Name("grid")
-    .Columns(columns => {
+Html.Kendo().Grid<EmployeeGridViewModel>()  
+.Name("EmployeesGrid")
+.Columns(columns => {
+        @* columns.Template(@<text><div style="text-align:center;"><img src="/Employees/ShowImage/#= Id #" alt="Profile" style="width: 50px; height: 50px; object-fit: cover; border-radius: 50%; border: 2px solid rgb(224, 224, 224);"/></div></text>)
+        .Title("Photo")
+        .Width(100);  *@
         columns.Bound(e => e.FirstName).Title("First Name");
         columns.Bound(e => e.LastName).Title("Last Name");
         columns.Bound(e => e.Email);
         columns.Bound(e => e.PhoneNumber);
         columns.Bound(e => e.HireDate).Format("{0:dd.MM.yyyy}");
-        columns.Bound(e => e.Department);
-        columns.Bound(e => e.JobTitle);
-
-        // Use ClientTemplate for Ajax binding
-        columns.Bound(e => e.ProfilePhoto)
-            .Title("Profile Photo")
-            .Sortable(false)
-            .Filterable(false);
+        columns.Bound(e => e.Department).Title("Department");
+        columns.Bound(e => e.JobTitle).Title("Job Title");
+        columns.Bound(e => e.ProfilePhoto).Title("Profile Photo");
+  
         
         columns.Bound(e => e.IsActive);
+
         columns.Command(command => {
-            command.Edit().Text("Edit");
+            command.Custom("Edit").Click("onEditClick").Text("Edit");
             command.Custom("Details").Click("detailsClick").Text("Details");
             command.Destroy().Text("Delete");
-        }).Title("Actions").Width(250);
+        }).Title("Actions");
     })
+
     .Pageable()
     .Sortable()
     .Scrollable()
     .Groupable()
     .Filterable()
-    .Editable(editable => editable.Mode(GridEditMode.PopUp).TemplateName("EmployeeGridViewModel"))
+    .Pdf(pdf => pdf 
+        .FileName("Employee-Export.pdf")
+        .AllPages(true)
+        .PaperSize("auto")
+        .Landscape()
+        .Margin("1cm", "1cm", "1cm", "1cm"))
     .Events(e => e.DataBound("onDataBound"))
     .DataSource(dataSource => dataSource
         .Ajax()
         .PageSize(20)
+        
         .Model(model => 
         {
             model.Id(p => p.Id);
         })
+        .Events(events => events 
+                     .RequestStart("onRequestStart")
+                    .RequestEnd("onRequestEnd")
+                    .Error("onError"))
         .ServerOperation(true)
-        .Read(read => read.Action("ReadEmployees", "Employees"))
-        .Update(update => update.Action("Update", "Employees"))
+        .Read(read => read.Action("ReadEmployees", "Employees")) 
         .Destroy(destroy => destroy.Action("Destroy", "Employees"))
     )
 )
+</div>

@@ -1,10 +1,14 @@
+wwwroot\css\employee.css
 wwwroot\css\site.css
 wwwroot\css\site.min.css
 wwwroot\favicon.ico
 wwwroot\images\200.png
 wwwroot\images\ai-circle.png
 wwwroot\images\no-photo.png
+wwwroot\js\departments.js
+wwwroot\js\employeeProjects.js
 wwwroot\js\employees.js
+wwwroot\js\jobTitles.js
 wwwroot\js\site.js
 wwwroot\js\site.min.js
 wwwroot\lib\bootstrap\css\bootstrap-grid.css
@@ -39,10 +43,29 @@ wwwroot\lib\jquery\jquery.js
 wwwroot\lib\jquery\jquery.min.js
 wwwroot\lib\jquery\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\uploads\profiles\1e960df3-cb7c-4eb1-b9c7-e9e0468c10f8.jpg
+wwwroot\uploads\profiles\6c573a5c-9069-42b9-a972-d22e99b42ce7.jpg
+wwwroot\uploads\profiles\9bd9ce77-f3fe-40c4-b512-4160cfc75833.jpg
 wwwroot\uploads\profiles\d967699f-30a9-493a-a011-091971c86fcb.jpg
+wwwroot\uploads\temp\08f6376c-ba84-418d-8474-a24b95c0c509.jpg
+wwwroot\uploads\temp\2296040b-345f-4002-b9fc-35ae157d5c44.jpg
+wwwroot\uploads\temp\259e06bc-10a2-48cd-ab35-b90ceb9d507c.jpg
+wwwroot\uploads\temp\25f9404b-a166-430e-b370-0c13000ca0cf.jpg
+wwwroot\uploads\temp\521a4e5b-0322-4f49-8d80-76b03a70c728.jpg
+wwwroot\uploads\temp\5c47984c-baf4-4a51-95d5-baab6769909a.jpg
+wwwroot\uploads\temp\660951a2-c8bc-47cf-b4e4-053fb83965f6.jpg
+wwwroot\uploads\temp\8389ae3d-5319-4df7-af9e-ac2fc2b21ed4.jpg
+wwwroot\uploads\temp\a105472c-634b-4b3a-ab08-63c51ef30627.jpg
+wwwroot\uploads\temp\a48f3556-e459-44db-ae61-2c5296d76453.jpg
+wwwroot\uploads\temp\ce822700-b0c4-4118-ae2b-b84db3192eee.jpg
+wwwroot\uploads\temp\f9c4702b-946d-4b46-ac67-02b3ba35fadf.jpg
+wwwroot\uploads\temp\fab41fcc-5b64-4103-9bcc-d049d5ec047e.jpg
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\wwwroot\css\site.min.css
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\wwwroot\favicon.ico
+C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\wwwroot\js\departments.js
+C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\wwwroot\js\employeeProjects.js
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\wwwroot\js\employees.js
+C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\wwwroot\js\jobTitles.js
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\wwwroot\js\site.js
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\wwwroot\js\site.min.js
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\wwwroot\lib\bootstrap\css\bootstrap-grid.css
@@ -70,11 +93,12 @@ C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\wwwroot\l
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\wwwroot\lib\jquery-validation\additional-methods.js
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\wwwroot\lib\jquery-validation\additional-methods.min.js
-C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\wwwroot\lib\jquery-validation\jquery.validate.js
-C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\wwwroot\lib\jquery-validation\jquery.validate.min.js
-C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\wwwroot\lib\jquery-validation\LICENSE.md
+C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\wwwroot\lib\jquery\LICENSE.txt
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\wwwroot\lib\jquery\jquery.js
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\wwwroot\lib\jquery\jquery.min.js
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\wwwroot\lib\jquery\jquery.min.map
-C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\wwwroot\lib\jquery\LICENSE.txt
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\wwwroot\css\site.css
+C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\wwwroot\css\employee.css
+C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\wwwroot\lib\jquery-validation\LICENSE.md
+C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\wwwroot\lib\jquery-validation\jquery.validate.js
+C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\wwwroot\lib\jquery-validation\jquery.validate.min.js

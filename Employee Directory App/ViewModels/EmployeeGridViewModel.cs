@@ -10,7 +10,9 @@ namespace Employee_Directory_App.ViewModels
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public DateTime HireDate { get; set; }
-        public string Department { get; set; }
+        public Guid? DepartmentId { get; set; }
+        public Guid? JobTitleId { get; set; }
+        public string Department {  get; set; }
         public string JobTitle { get; set; }
         public bool IsActive { get; set; }
       

@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Employee_Directory_App.Data;
+using Employee_Directory_App.Models;
+using Kendo.Mvc.Extensions;
+using Kendo.Mvc.UI;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Employee_Directory_App.Data;
-using Employee_Directory_App.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace Employee_Directory_App.Controllers
 {
@@ -20,9 +23,27 @@ namespace Employee_Directory_App.Controllers
         }
 
         // GET: Departments
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            return View(await _context.Departments.ToListAsync());
+            return View();
+        }
+
+       
+        public async Task<IActionResult> ReadDepartments([DataSourceRequest] DataSourceRequest request)
+        {
+            var departments = _context.Departments
+               .Select(d => new Department
+               {
+                   Id = d.Id,
+                   Name = d.Name
+               });
+
+            var result = await departments.ToDataSourceResultAsync(request);
+            return Json(result, new JsonSerializerOptions
+            {
+                PropertyNamingPolicy = null,
+                ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles
+            });
         }
 
         // GET: Departments/Details/5
@@ -49,9 +70,6 @@ namespace Employee_Directory_App.Controllers
             return View();
         }
 
-        // POST: Departments/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name")] Department department)
@@ -82,9 +100,6 @@ namespace Employee_Directory_App.Controllers
             return View(department);
         }
 
-        // POST: Departments/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Guid id, [Bind("Id,Name")] Department department)
@@ -136,9 +151,9 @@ namespace Employee_Directory_App.Controllers
         }
 
         // POST: Departments/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(Guid id)
+        public async Task<IActionResult> Destroy(Guid id)
         {
             var department = await _context.Departments.FindAsync(id);
             if (department != null)

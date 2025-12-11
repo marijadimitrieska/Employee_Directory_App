@@ -1,4 +1,6 @@
-﻿@model IEnumerable<Employee_Directory_App.Models.Department>
+﻿@using Kendo.Mvc.UI
+@using Kendo.Mvc.Extensions
+@using Employee_Directory_App.Models
 
 @{
     ViewData["Title"] = "Index";
@@ -9,27 +11,32 @@
 <p>
     <a asp-action="Create" class="k-button k-button-md k-rounded-md k-button-solid">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id" class="k-button k-button-md k-rounded-md k-button-solid-primary">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id" class="k-button k-button-md k-rounded-md k-button-solid">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id" class="k-button k-button-md k-rounded-md k-button-solid">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+<script src="~/js/departments.js"></script>
+
+@(Html.Kendo().Grid<Department>()
+    .Name("DepartmentGrid")
+    .Columns(columns =>
+    {
+        columns.Bound(e => e.Name);
+        columns.Command(command =>
+        {
+            command.Custom("Edit").Click("onEditClick").Text("Edit");
+            command.Destroy();
+        }).Title("Actions");
+    })
+    .Pageable()
+    .Groupable()
+    .Sortable()
+    .Scrollable()
+    .Events(e=> e.DataBound("onDataBound"))
+    .DataSource(dataSource => dataSource 
+        .Ajax()
+        .PageSize(20)
+        .Model(model => {
+            model.Id(p => p.Id);
+        })
+    .ServerOperation(true)
+    .Read(read => read.Action("ReadDepartments", "Departments"))
+    .Destroy(destroy => destroy.Action("Destroy", "Departments")))
+    )

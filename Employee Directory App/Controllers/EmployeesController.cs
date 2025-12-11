@@ -78,18 +78,16 @@ namespace Employee_Directory_App.Controllers
         {
             var vm = new EmployeeViewModel
             {
-                Employee = new Employee()
+                Employee = new Employee(),
+                Departments = _context.Departments.ToList(),
+                JobTitles = _context.JobTitles.ToList()
             };
             ViewData["DepartmentId"] = new SelectList(_context.Departments, "Id", "Name");
             ViewData["JobTitleId"] = new SelectList(_context.JobTitles, "Id", "Title");
             return View(vm);
         }
 
-        // POST: Employees/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
         [Authorize(Roles ="Admin")]
         public async Task<IActionResult> Create(EmployeeViewModel vm)
         {
@@ -168,117 +166,135 @@ namespace Employee_Directory_App.Controllers
             }
             var vm = new EmployeeViewModel
             {
-                Employee = employee
+                Employee = employee,
+                Departments = _context.Departments.ToList(),
+                JobTitles = _context.JobTitles.ToList()
             };
 
-            ViewData["DepartmentId"] = new SelectList(_context.Departments, "Id", "Name", employee.DepartmentId);
-            ViewData["JobTitleId"] = new SelectList(_context.JobTitles, "Id", "Title", employee.JobTitleId);
-
+       
             return View(vm);
         }
 
-        // POST: Employees/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
-        public async Task<IActionResult> Update([DataSourceRequest] DataSourceRequest request, EmployeeGridViewModel vm)
+        public async Task<IActionResult> Edit(Guid id, EmployeeViewModel vm)
         {
-            if(vm == null)
+            if (id != vm.Employee.Id)
             {
-                return Json(ModelState.ToDataSourceResult());
+                return BadRequest();
             }
+            var existingEntity = await _context.Employees
+                .Include(e => e.Department)
+                .Include(e => e.JobTitle)
+                .FirstOrDefaultAsync(e=>e.Id == id);
 
-            var employee = await _context.Employees
-                .Include(e=>e.Department)
-                .Include(e=> e.JobTitle)
-                .FirstOrDefaultAsync(e => e.Id == vm.Id);
-
-            if(employee == null)
+            if(existingEntity == null)
             {
-                return Json(ModelState.ToDataSourceResult());
+                return NotFound();
             }
 
             var user = await _userManager.GetUserAsync(User);
             bool isAdmin = await _userManager.IsInRoleAsync(user, "Admin");
             bool isEmployee = await _userManager.IsInRoleAsync(user, "Employee");
 
-            if(!isAdmin && !(isEmployee && user.EmployeeId == vm.Id))
+            if (!isAdmin && !(isEmployee && user.EmployeeId == vm.Employee.Id))
             {
-                return Json(new { error = true, message = "Unauthorized" });
+                return Unauthorized();
             }
 
-            employee.FirstName = vm.FirstName;
-            employee.LastName = vm.LastName;
-            employee.Email = vm.Email;
-            employee.PhoneNumber = vm.PhoneNumber;
-            employee.HireDate = vm.HireDate;
-            employee.IsActive = vm.IsActive;
-            employee.ProfilePhoto = vm.ProfilePhoto;
-            //if (employee == null)
+            existingEntity.Id = vm.Employee.Id;
+            existingEntity.FirstName = vm.Employee.FirstName;
+            existingEntity.LastName = vm.Employee.LastName;
+            existingEntity.Email = vm.Employee.Email;
+            existingEntity.PhoneNumber = vm.Employee.PhoneNumber;
+            existingEntity.HireDate = vm.Employee.HireDate;
+            existingEntity.DepartmentId = vm.Employee.DepartmentId;
+            existingEntity.JobTitleId = vm.Employee.JobTitleId;
+            existingEntity.IsActive = vm.Employee.IsActive;
+            
+            if(vm.ImageFile != null)
+            {
+                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", "profiles");
+                Directory.CreateDirectory(uploadsFolder);
+
+                var uniqueFileName = Guid.NewGuid() + Path.GetExtension(vm.ImageFile.FileName);
+                var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await vm.ImageFile.CopyToAsync(stream);
+                }
+
+                existingEntity.ProfilePhoto = "/uploads/profiles/" + uniqueFileName;
+
+
+            }
+            _context.Update(existingEntity);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+
+            }
+
+            //if(!ModelState.IsValid)
             //{
-            //    return Json(ModelState.ToDataSourceResult());
+            //    var errors = ModelState
+            //        .Where(x => x.Value.Errors.Any())
+            //        .ToDictionary(
+            //            kvp => kvp.Key,
+            //            kvp => kvp.Value.Errors.Select(e => e.ErrorMessage).ToArray()
+            //        );
+            //    return Json(new { success = false, errors });
             //}
+
+            //var employee = await _context.Employees
+            //    .Include(e=>e.Department)
+            //    .Include(e=> e.JobTitle)
+            //    .FirstOrDefaultAsync(e => e.Id == vm.Employee.Id);
+
+            //if(employee == null)
+            //{
+            //    return Json(new { success = false, errors = new { Employee = new[] { "Employee not found." } } });
+            //}
+
+            //var user = await _userManager.GetUserAsync(User);
+            //bool isAdmin = await _userManager.IsInRoleAsync(user, "Admin");
+            //bool isEmployee = await _userManager.IsInRoleAsync(user, "Employee");
+
+            //if(!isAdmin && !(isEmployee && user.EmployeeId == vm.Employee.Id))
+            //{
+            //    return Json(new { success = false, errors = new { Employee = new[] { "Unauthorized" } } });
+            //}
+
+            //employee.FirstName = vm.Employee.FirstName;
+            //employee.LastName = vm.Employee.LastName;
+            //employee.Email = vm.Employee.Email;
+            //employee.PhoneNumber = vm.Employee.PhoneNumber;
+            //employee.HireDate = vm.Employee.HireDate;
+            //employee.DepartmentId = vm.Employee.DepartmentId;
+            //employee.JobTitleId = vm.Employee.JobTitleId;
+            //employee.IsActive = vm.Employee.IsActive;
+            
             //if(vm.ImageFile != null)
             //{
-            //    if (!string.IsNullOrEmpty(employee.ProfilePhoto))
-            //    {
-            //        var oldFilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", employee.ProfilePhoto.TrimStart('/'));
-            //        if (System.IO.File.Exists(oldFilePath))
-            //        {
-            //            System.IO.File.Delete(oldFilePath);
-            //        }
-            //    }
             //    var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", "profiles");
             //    Directory.CreateDirectory(uploadsFolder);
 
-            //    var uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(vm.ImageFile.FileName);
+            //    var uniqueFileName = Guid.NewGuid() + Path.GetExtension(vm.ImageFile.FileName);
             //    var filePath = Path.Combine(uploadsFolder, uniqueFileName);
 
-            //    using (var stream = new FileStream(filePath, FileMode.Create))
+            //    using(var stream = new FileStream(filePath, FileMode.Create))
             //    {
             //        await vm.ImageFile.CopyToAsync(stream);
             //    }
-            //    employee.ProfilePhoto = "/uploads/profiles/" + uniqueFileName; 
 
+            //    employee.ProfilePhoto = "/uploads/profiles/" + uniqueFileName;
             //}
-            //employee.PhoneNumber = vm.Employee.PhoneNumber;
-            //employee.Email = vm.Employee.Email;
+            //_context.Update(employee);
+            //await _context.SaveChangesAsync();
 
-            if (ModelState.IsValid)
-            {
-
-                _context.Update(employee);
-                await _context.SaveChangesAsync();
-
-                //catch (DbUpdateConcurrencyException)
-                //{
-                //    if (!EmployeeExists(employee.Id))
-                //    {
-                //        return NotFound();
-                //    }
-                //    else
-                //    {
-                //        throw;
-                //    }
-                //}
-            }
-
-            var resultVm = new EmployeeGridViewModel
-            {
-                Id = employee.Id,
-                FirstName = vm.FirstName,
-                LastName = vm.LastName,
-                Email = vm.Email,
-                PhoneNumber = vm.PhoneNumber,
-                HireDate = vm.HireDate,
-                Department = vm.Department,
-                JobTitle = vm.JobTitle,
-                IsActive = vm.IsActive,
-                ProfilePhoto = vm.ProfilePhoto
-            };
-            return Json(new[] { resultVm }.ToDataSourceResult(request, ModelState));
+            //return Json(new { success = true, redirectUrl = Url.Action("Index", "Employees") });
      
-        }
 
         // GET: Employees/Delete/5
         [Authorize(Roles = "Admin")]
@@ -321,73 +337,83 @@ namespace Employee_Directory_App.Controllers
 
         public async Task<IActionResult> ReadEmployees([DataSourceRequest] DataSourceRequest request)
         {
-            var user = await _userManager.GetUserAsync(User);
-            bool isAdmin = await _userManager.IsInRoleAsync(user, "Admin");
-
-            IQueryable<Employee> employees;
-
-            try
-            {
-                if (isAdmin)
+            var employees = _context.Employees
+                .Include(e => e.Department)
+                .Include(e => e.JobTitle)
+                .Select(e => new EmployeeGridViewModel
                 {
-                    employees = _context.Employees
-                        .Include(e => e.Department)
-                        .Include(e => e.JobTitle);
-                }
-                else
-                {
-                    employees = _context.Employees
-                        .Where(e => e.Id == user.EmployeeId)
-                        .Include(e => e.Department)
-                        .Include(e => e.JobTitle);
-
-                }
-                var dto = await employees
-                    .Select(e => new EmployeeGridViewModel
-                    {
-                        Id = e.Id,
-                        FirstName = e.FirstName,
-                        LastName = e.LastName,
-                        Email = e.Email,
-                        PhoneNumber = e.PhoneNumber,
-                        HireDate = e.HireDate,
-                        Department = e.Department != null ? e.Department.Name : null,
-                        JobTitle = e.JobTitle != null ? e.JobTitle.Title : null,
-                        IsActive = e.IsActive,
-                       ProfilePhoto = e.ProfilePhoto
-                    }).ToListAsync();
-
-                var result = dto.ToDataSourceResult(request);
-                return Json(result, new JsonSerializerOptions
-                {
-                        PropertyNamingPolicy = null
+                    Id = e.Id,
+                    FirstName = e.FirstName,
+                    LastName = e.LastName,
+                    Email = e.Email,
+                    PhoneNumber = e.PhoneNumber,
+                    HireDate = e.HireDate,
+                    DepartmentId = e.DepartmentId,
+                    JobTitleId = e.JobTitleId,
+                    Department = e.Department != null ? e.Department.Name : "",
+                    JobTitle = e.JobTitle != null ? e.JobTitle.Title : "",
+                    IsActive = e.IsActive,
+                    ProfilePhoto = e.ProfilePhoto
                 });
-            }
-            catch (Exception ex)
+            var result = await employees.ToDataSourceResultAsync(request);
+
+            return Json(result, new JsonSerializerOptions
             {
-                return Json(new {error = true, message = ex.Message });
-            }
+                PropertyNamingPolicy = null,
+                ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles
+            });
+
         }
 
-        //public IActionResult ShowImage(Guid id)
-        //{
-        //    var employee = _context.Employees.FirstOrDefault(e => e.Id == id);
 
-        //    if(employee?.ProfilePhoto == null)
-        //    {
-        //        return File("~/images/no-image.png", "image/png");
-        //    }
-        //    string contentType = employee.ImageExtension?
-        //        .ToLower() switch
-        //    {
-        //        ".png" => "image/png",
-        //        ".jpg" => "image/jpeg",
-        //        ".jpeg" => "image/jpeg",
-        //        ".gif" => "image/gif",
-        //        _ => "application/octet-stream"
-        //    };
-        //    return File(employee.ProfilePhoto, contentType);
-        //}
+        public IActionResult ShowImage(Guid id)
+        {
+            var employee = _context.Employees.Find(id);
+
+            if (employee==null || string.IsNullOrEmpty(employee.ProfilePhoto))
+            {
+               
+                return NotFound();
+
+            }
+            var imagePath = employee.ProfilePhoto.TrimStart('/');
+
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", imagePath);
+
+            Console.WriteLine($"Looking for image at: {filePath}");
+            Console.WriteLine($"File existis: {System.IO.File.Exists(filePath)}");
+
+
+            if (System.IO.File.Exists(filePath))
+                {
+                    var extension = Path.GetExtension(filePath).ToLower();
+                    var contentType = GetContentType(extension);
+
+                    return PhysicalFile(filePath, contentType);
+                }
+
+            var directory = Path.GetDirectoryName(filePath);
+            if (Directory.Exists(directory))
+            {
+                Console.WriteLine($"Files in directory: {string.Join(", ", Directory.GetFiles(directory))}");
+            }
+            return File("/images/no-photo.png", "image/png");
+        }
+
+        private string GetContentType(string extension)
+        {
+            return extension switch
+            {
+                ".png" => "image/png",
+                ".jpg" => "image/jpeg",
+                ".jpeg" => "image/jpeg",
+                ".gif" => "image/gif",
+                ".bmp" => "image/bmp",
+                ".svg" => "image/svg+xml",
+                ".webp" => "image/webp",
+                _ => "application/octet-stream"
+            };
+        }
 
         //public async Task<IActionResult> DeleteImage(Guid id)
         //{
@@ -410,28 +436,47 @@ namespace Employee_Directory_App.Controllers
         public async Task<IActionResult> SaveTempImage(IFormFile ImageFile)
         {
             if (ImageFile == null || ImageFile.Length == 0)
-                return Json(new { success = false, message = "No file upload" });
+                return Json(new[]{ new { name = "", size = 0, error = "No file uploaded" }});
 
             var allowedExtensions = new[] { ".png", ".jpg", ".jpeg", ".gif" };
             var extension = Path.GetExtension(ImageFile.FileName).ToLower();
 
             if (!allowedExtensions.Contains(extension))
             {
-                return Json(new { success = false, message = "Invalid file type" });
+                return Json(new[] { new { name = "", size = 0, error = "Invalid file type" } });
             }
 
-            using var memoryStream = new MemoryStream();
-            await ImageFile.CopyToAsync(memoryStream);
+            var tempFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", "temp");
+            Directory.CreateDirectory(tempFolder);
 
-            TempData["TempImage"] = memoryStream.ToArray();
-            TempData["TempImageExtension"] = extension;
+            var uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(ImageFile.FileName);
+            var filePath = Path.Combine(tempFolder, uniqueFileName);
 
-            return Json(new { success = true });
+            using(var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await ImageFile.CopyToAsync(stream);
+            }
+
+            return Json(new[]
+            {
+                new{
+                    name = ImageFile.FileName,
+                    size = ImageFile.Length,
+                    newPhotoPath = "/uploads/temp/" + uniqueFileName,
+                    uid = Guid.NewGuid().ToString()
+            }
+            });
+        }
+        [HttpPost]
+        public ActionResult PdfExportSave(string contentType, string base64, string fileName)
+        {
+            var fileContents = Convert.FromBase64String(base64);
+            return File(fileContents, contentType, fileName);
         }
 
-        //private bool EmployeeExists(Guid id)
-        //{
-        //    return _context.Employees.Any(e => e.Id == id);
-        //}
+        private bool EmployeeExists(Guid id)
+        {
+            return _context.Employees.Any(e => e.Id == id);
+        }
     }
 }

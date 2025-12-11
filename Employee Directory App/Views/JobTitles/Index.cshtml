@@ -9,27 +9,34 @@
 <p>
     <a asp-action="Create" class="k-button k-button-md k-rounded-md k-button-solid">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id" class="k-button k-button-md k-rounded-md k-button-solid-primary">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id" class="k-button k-button-md k-rounded-md k-button-solid">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id" class="k-button k-button-md k-rounded-md k-button-solid">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<script src="/js/jobTitles.js"></script>
+@(
+Html.Kendo().Grid<Employee_Directory_App.Models.JobTitle>()
+    .Name("JobTittleGrid")
+    .Columns(columns =>
+    {
+        columns.Bound(j => j.Title);
+        columns.Command(command =>
+        {
+            command.Custom("Edit").Click("onEditClick").Text("Edit");
+            command.Destroy().Text("Delete");
+        }).Title("Actions");
+    })
+    .Pageable()
+    .Scrollable()
+    .Sortable()
+    .Groupable()
+    .Filterable()
+    .Events(e => e.DataBound("onDataBound"))
+    .DataSource(dataSource => dataSource 
+        .Ajax()
+        .PageSize(20)
+        .Model(model=>
+        { 
+            model.Id(p => p.Id);
+        })
+        .ServerOperation(true)
+        .Read(read => read.Action("ReadJobTitles", "JobTitles"))
+        .Destroy(destroy => destroy.Action("Destroy", "JobTitles"))
+    )
+)

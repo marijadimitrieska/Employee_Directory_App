@@ -146,8 +146,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xFbWFpbEFkZHJlc3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Shared/EditorTemplates/EmployeeGridViewModel.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xFbXBsb3llZUdyaWRWaWV3TW9kZWwuY3NodG1s
+[C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Shared/EditorTemplates/EmployeeEditorTemplate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xFbXBsb3llZUVkaXRvclRlbXBsYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/marijad/Desktop/Employee Directory App/Employee Directory App/Views/Shared/EditorTemplates/GridForeignKey.cshtml]

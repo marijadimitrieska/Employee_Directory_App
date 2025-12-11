@@ -667,7 +667,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.JsonPatch/10.0.0": {
+      "Microsoft.AspNetCore.JsonPatch/10.0.1": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.3"
@@ -686,10 +686,10 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Microsoft.AspNetCore.Mvc.NewtonsoftJson/10.0.0": {
+      "Microsoft.AspNetCore.Mvc.NewtonsoftJson/10.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.JsonPatch": "10.0.0",
+          "Microsoft.AspNetCore.JsonPatch": "10.0.1",
           "Newtonsoft.Json": "13.0.3",
           "Newtonsoft.Json.Bson": "1.0.2"
         },
@@ -3872,10 +3872,10 @@
         "microsoft.aspnetcore.identity.entityframeworkcore.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.JsonPatch/10.0.0": {
-      "sha512": "+hISlxEFfSmgVtJIzUenjkTcNVHvfU/LNSekIQQb001tb8Vrol5OqQMgiD+cz97zkguvFtmeVAejL6sIUnBEpA==",
+    "Microsoft.AspNetCore.JsonPatch/10.0.1": {
+      "sha512": "hCpDeNH6F34YtEfe216RWqdUK2EjrN7O6gORfHjxhPap1z0fJ4fjP298WyIwUsZ8vM56CVOyA6rPW3fMlEz7Fw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.jsonpatch/10.0.0",
+      "path": "microsoft.aspnetcore.jsonpatch/10.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3888,14 +3888,14 @@
         "lib/net462/Microsoft.AspNetCore.JsonPatch.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.xml",
-        "microsoft.aspnetcore.jsonpatch.10.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.jsonpatch.10.0.1.nupkg.sha512",
         "microsoft.aspnetcore.jsonpatch.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Mvc.NewtonsoftJson/10.0.0": {
-      "sha512": "EMDUybl6z95zX0YdLrTH8KnLyietzRQgseuzbEtiEpLy0nMXd2Xvvda09Q4DYGfeVRS1J1XQoTGCOEao6kJcgw==",
+    "Microsoft.AspNetCore.Mvc.NewtonsoftJson/10.0.1": {
+      "sha512": "fhPbD24SG7WppBKJpHiEr0h4pD03djajEqfIXJFFsGDfpkZP5Gl+dj285rztRHilgeTpzMeidXk0KSFehubnTQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.mvc.newtonsoftjson/10.0.0",
+      "path": "microsoft.aspnetcore.mvc.newtonsoftjson/10.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3904,7 +3904,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net10.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll",
         "lib/net10.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.xml",
-        "microsoft.aspnetcore.mvc.newtonsoftjson.10.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.mvc.newtonsoftjson.10.0.1.nupkg.sha512",
         "microsoft.aspnetcore.mvc.newtonsoftjson.nuspec"
       ]
     },
@@ -7732,7 +7732,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

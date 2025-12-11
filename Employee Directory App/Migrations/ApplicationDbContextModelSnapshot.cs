@@ -160,6 +160,9 @@ namespace Employee_Directory_App.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("EmployeeFullName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<Guid>("EmployeeId")
                         .HasColumnType("uniqueidentifier");
 

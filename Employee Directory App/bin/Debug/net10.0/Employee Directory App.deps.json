@@ -10,7 +10,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "10.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "10.0.0",
-          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "10.0.0",
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "10.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "10.0.0-rc.1.25458.5",
           "Telerik.UI.for.AspNet.Core": "2025.4.1111"
@@ -607,27 +607,27 @@
           }
         }
       },
-      "Microsoft.AspNetCore.JsonPatch/10.0.0": {
+      "Microsoft.AspNetCore.JsonPatch/10.0.1": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
           "lib/net10.0/Microsoft.AspNetCore.JsonPatch.dll": {
-            "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.25.52411"
+            "assemblyVersion": "10.0.1.0",
+            "fileVersion": "10.0.125.57005"
           }
         }
       },
-      "Microsoft.AspNetCore.Mvc.NewtonsoftJson/10.0.0": {
+      "Microsoft.AspNetCore.Mvc.NewtonsoftJson/10.0.1": {
         "dependencies": {
-          "Microsoft.AspNetCore.JsonPatch": "10.0.0",
+          "Microsoft.AspNetCore.JsonPatch": "10.0.1",
           "Newtonsoft.Json": "13.0.3",
           "Newtonsoft.Json.Bson": "1.0.2"
         },
         "runtime": {
           "lib/net10.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll": {
-            "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.25.52411"
+            "assemblyVersion": "10.0.1.0",
+            "fileVersion": "10.0.125.57005"
           }
         }
       },
@@ -2158,7 +2158,7 @@
       },
       "Telerik.UI.for.AspNet.Core/2025.4.1111": {
         "dependencies": {
-          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "10.0.0",
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "10.0.1",
           "Microsoft.CodeAnalysis": "4.14.0",
           "Telerik.FontIcons": "4.5.0",
           "Telerik.Licensing": "1.6.31",
@@ -2850,19 +2850,19 @@
       "path": "microsoft.aspnetcore.identity.entityframeworkcore/10.0.0",
       "hashPath": "microsoft.aspnetcore.identity.entityframeworkcore.10.0.0.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.JsonPatch/10.0.0": {
+    "Microsoft.AspNetCore.JsonPatch/10.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-+hISlxEFfSmgVtJIzUenjkTcNVHvfU/LNSekIQQb001tb8Vrol5OqQMgiD+cz97zkguvFtmeVAejL6sIUnBEpA==",
-      "path": "microsoft.aspnetcore.jsonpatch/10.0.0",
-      "hashPath": "microsoft.aspnetcore.jsonpatch.10.0.0.nupkg.sha512"
+      "sha512": "sha512-hCpDeNH6F34YtEfe216RWqdUK2EjrN7O6gORfHjxhPap1z0fJ4fjP298WyIwUsZ8vM56CVOyA6rPW3fMlEz7Fw==",
+      "path": "microsoft.aspnetcore.jsonpatch/10.0.1",
+      "hashPath": "microsoft.aspnetcore.jsonpatch.10.0.1.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Mvc.NewtonsoftJson/10.0.0": {
+    "Microsoft.AspNetCore.Mvc.NewtonsoftJson/10.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-EMDUybl6z95zX0YdLrTH8KnLyietzRQgseuzbEtiEpLy0nMXd2Xvvda09Q4DYGfeVRS1J1XQoTGCOEao6kJcgw==",
-      "path": "microsoft.aspnetcore.mvc.newtonsoftjson/10.0.0",
-      "hashPath": "microsoft.aspnetcore.mvc.newtonsoftjson.10.0.0.nupkg.sha512"
+      "sha512": "sha512-fhPbD24SG7WppBKJpHiEr0h4pD03djajEqfIXJFFsGDfpkZP5Gl+dj285rztRHilgeTpzMeidXk0KSFehubnTQ==",
+      "path": "microsoft.aspnetcore.mvc.newtonsoftjson/10.0.1",
+      "hashPath": "microsoft.aspnetcore.mvc.newtonsoftjson.10.0.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Razor.Language/6.0.24": {
       "type": "package",

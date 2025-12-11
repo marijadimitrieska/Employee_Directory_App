@@ -10,5 +10,6 @@ namespace Employee_Directory_App.Models
         public Employee? Employee { get; set; }
         [Required]
         public string Title { get; set; }
+        public string EmployeeFullName { get; set; }
     }
 }

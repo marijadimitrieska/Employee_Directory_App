@@ -1,0 +1,73 @@
+﻿@model Employee_Directory_App.ViewModels.EmployeeGridViewModel
+
+<div class="k-edit-form-container">
+    <input type="hidden" name="Id" id="Id" value="#: Id #" />
+
+    <div class="form-group">
+        <label>First Name</label>
+        <input class="k-textbox" name="FirstName" value="#: FirstName #"/>
+     
+    </div>
+
+    <div class="form-group">
+        <label>Last Name</label>
+        <input name="LastName" class="k-textbox" value="#: LastName #"/>
+    </div>
+
+    <div class="form-group">
+        <label>Email</label>
+        <input name="Email" class="k-textbox" value="#: Email #"/>
+    </div>
+    <div class="form-group">
+        <label>PhoneNumber</label>
+        <input name="PhoneNumber" class="k-textbox" value="#: PhoneNumber #"/>
+    </div>
+    <div class="form-group">
+        <label>Hire Date</label>
+         @(Html.Kendo().DateTimePicker()
+            .Name("HireDate")
+            .Value(Model?.HireDate))
+    </div>
+
+    <div class="form-group">
+        <label>Department</label>
+        @(Html.Kendo().DropDownListFor(m => m.DepartmentId)
+            .DataTextField("Text")
+            .DataValueField("Value")
+            .BindTo(Model.DepartmentId.ToString()))
+    </div>
+
+    <div class="form-group">
+        <label>Job Title</label>
+        @(Html.Kendo().DropDownListFor(m => m.JobTitleId)
+            .DataTextField("Text")
+            .DataValueField("Value")
+            .BindTo(Model.JobTitleId.ToString()))
+    </div>
+    <div class="form-group">
+        <label>Upload Image</label>
+        @(Html.Kendo().Upload()
+                .Name("ImageFile")
+                .Multiple(false)
+                .Async(a => a
+                    .Save("SaveTempImage", "Employees")
+                    .AutoUpload(true))
+                .Validation(v => v
+                    .AllowedExtensions(new string[] { ".jpg", ".jpeg", ".png", ".gif" })
+                    .MaxFileSize(5242880))
+                .Events(e => e
+                    .Success("onUploadSuccess")
+                    .Error("onUploadError"))
+                )
+        <div id="imagePreview" style="margin-top:20px;"></div>
+    </div>
+    <div class="form-group">
+        @(Html.Kendo().CheckBox()
+        .Name("IsActive")
+        .Checked(Model?.IsActive ?? false)
+        )
+        <label>Is Active</label>
+    </div>
+
+</div>
+

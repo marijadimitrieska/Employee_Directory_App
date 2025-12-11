@@ -405,10 +405,13 @@ C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\scopedcss\bundle\Employee Directory App.styles.css
+C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\compressed\33xjka8jti-{0}-dy7uruu731-dy7uruu731.gz
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\compressed\b9clzt8vkv-{0}-xx3olyi0uk-xx3olyi0uk.gz
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\compressed\ajhg99qiaf-{0}-b5waqfwj8v-b5waqfwj8v.gz
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\compressed\cmpid24qu4-{0}-90yqlj465b-90yqlj465b.gz
-C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\compressed\by5c4gtoov-{0}-1rubem3ki2-1rubem3ki2.gz
+C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\compressed\c5jur7j8w7-{0}-l60tmgg66b-l60tmgg66b.gz
+C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\compressed\6ildrum7ff-{0}-0um7qiqszs-0um7qiqszs.gz
+C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\compressed\tnl2nm4v33-{0}-hz0xhb2tlb-hz0xhb2tlb.gz
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\compressed\sdebpzh70a-{0}-bdxk4ky52g-bdxk4ky52g.gz
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\compressed\hhn2c91rze-{0}-hw11wrue9c-hw11wrue9c.gz
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\compressed\dd1vr44j3s-{0}-tme31ylc7c-tme31ylc7c.gz
@@ -448,10 +451,11 @@ C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\staticwebassets.development.json
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\swae.build.ex.cache
+C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\Employee.AFDE328D.Up2Date
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\Employee Directory App.dll
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\refint\Employee Directory App.dll
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\Employee Directory App.pdb
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\Employee Directory App.genruntimeconfig.cache
 C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\ref\Employee Directory App.dll
-C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+C:\Users\marijad\Desktop\Employee Directory App\Employee Directory App\obj\Debug\net10.0\compressed\by5c4gtoov-{0}-r1idwino6u-r1idwino6u.gz
